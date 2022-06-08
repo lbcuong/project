@@ -196,10 +196,15 @@ function tabComponemts($table){
         case "measuring_units":
             $tabs['overview'] = array('code','name');
             $tabs['tab2'] = array('comment');
+
+
             return $tabs;
             break;
         default:
             return $tabs;
     }
-
+}
+function fillActionComponents($table){
+    $tableInFill = array('measuring_units');
+    return in_array($table,$tableInFill);
 }

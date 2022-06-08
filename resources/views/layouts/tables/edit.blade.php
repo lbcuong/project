@@ -27,6 +27,7 @@
                         </div>
                     </div>
                 </div>
+                @widget('FillAction',['table'=>$table])
                 @widget('TabComponents',['table'=>$table])
                 <div class="data-items pb-3 data-items-unset">
                     <form method="post" id="form-data-list" action="{{ route($table)}}" enctype="multipart/form-data">

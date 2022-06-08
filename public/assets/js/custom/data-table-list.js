@@ -15,6 +15,9 @@ $(document).ready(function() {
     if( $('.table-edit').find('#basic-tabs-components').length !== 0){
         $('.data-items').addClass('data-items-bottom-fixed');
     }
+    if( $('.table-edit').find('.fill-action').length !== 0){
+        $('.data-items').addClass('data-items-bottom-fixed-fillaction');
+    }
     // Add filtering
     $('.is-filter-grid').on('change',function (){
         if($(this).is(':checked'))

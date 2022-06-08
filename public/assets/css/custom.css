@@ -383,6 +383,9 @@ div.dataTables_wrapper div.dataTables_processing{
 .data-items-bottom-fixed{
     height: calc(100% - 14rem) !important;
 }
+.data-items-bottom-fixed-fillaction{
+    height: calc(100% - 16rem) !important;
+}
 .data-list-view-header .add-new-data-sidebar .add-new-data .new-data-title, .data-thumb-view-header .add-new-data-sidebar .add-new-data .new-data-title{
     border-bottom: 0px solid rgba(0, 0, 0, 0.1) !important;
     padding-bottom: 5px !important;
@@ -441,4 +444,19 @@ div.dataTables_wrapper div.dataTables_processing{
 }
 #form-data-list-transection .form-control[readonly],#form-data-list-transection .form-control[disabled]{
     background-color: #ffffff !important;
+}
+.fill-action{
+    overflow-x: auto;
+    overflow-y: hidden;
+    white-space:nowrap;
+    -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none;  /* Firefox */
+}
+.fill-action::-webkit-scrollbar {
+    display: none;
+}
+.fill-action button{
+    padding: 8px 16px !important;
+    margin-right: 5px;
+    font-size: 13px !important;
 }
