@@ -38,15 +38,15 @@
                     </li>
                     <li class="dropdown dropdown-user nav-item"><a class="dropdown-toggle nav-link dropdown-user-link" href="#" data-toggle="dropdown">
                             <div class="user-nav d-sm-flex d-none"><span class="user-name text-bold-600">{{auth()->user()->name}}</span><span class="user-status">Chức vụ</span></div><span>
-                            @if((auth()->user()->person->image ?? ''))
-                                    <img class="round" src="../../../{{auth()->user()->person->image}}"
+                            @if((auth()->user()->image ?? ''))
+                                    <img class="round" src="../../../{{auth()->user()->image}}"
                                          alt="avatar" height="40" width="40"></span>
                             @else
                                 <img class="round"
                                      src="../../../app-assets/images/portrait/small/avatar-s-11.jpg"
                                      alt="avatar" height="40" width="40"></span>
                             @endif                         </a>
-                        <div class="dropdown-menu dropdown-menu-right"><a class="dropdown-item" href="{{route('users.profile',['user'=> auth()->user()->id])}}"><i class="feather icon-user"></i> Edit Profile</a>
+                        <div class="dropdown-menu dropdown-menu-right"><a class="dropdown-item" href="#"><i class="feather icon-user"></i> Edit Profile</a>
 
                             <div class="dropdown-divider"></div>
                             <a class="dropdown-item" href="{{route('logout')}}" onclick="event.preventDefault();

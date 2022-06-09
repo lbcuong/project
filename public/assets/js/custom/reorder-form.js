@@ -2,7 +2,8 @@
     'use strict';
     let ROW_EDIT_OLD = [];
     $('body').on("keyup change", "#form-data-list .transaction-tab input, #form-data-list .transaction-tab select", function(e) {
-        var isDetail = $('.tab-reorder').attr('is-detail')
+        var isDetail = $('.tab-reorder').attr('is-detail');
+        window.isChange = true;
         e.preventDefault();
         if(isDetail){
             $('.btn-submit').removeClass('d-none');
@@ -84,6 +85,7 @@
 
 
     function editTransactions(){
+        window.isSuccessSubmit = false;
         var postURL = '/'+TABLE_NAME;
         $('.error .message').html('');
         $.ajax({
@@ -95,6 +97,7 @@
             processData: false
         }).done(function(data) {
             if(data.success){
+                window.isSuccessSubmit = true;
                 closeSidebar();
                 var dataTable = $('.data-list-view').DataTable();
                 dataTable.ajax.reload();

@@ -181,8 +181,8 @@
                                             <div class="controls">
                                                 <label for="account-name">Birthday</label>
                                                 <fieldset class="form-group position-relative">
-                                                    <input type="text" class="form-control datepicker" id="{{$idDataPicker = setIdDatePicker()}}" name="birthday" placeholder="birthday" value="{{ old('birthday', $user->person->birthday ?? '') }}" required>
-                                                    <div class="form-control-position datepicker-icon" picker-id="{{$idDataPicker}}">
+                                                    <input type="text" class="form-control datepicker" name="birthday" placeholder="birthday" value="{{ old('birthday', $user->person->birthday ?? '') }}" required>
+                                                    <div class="form-control-position datepicker-icon">
                                                         <i class="fa fa-calendar"></i>
                                                     </div>
                                                 </fieldset>

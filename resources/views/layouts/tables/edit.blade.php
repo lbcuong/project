@@ -32,7 +32,7 @@
                 <div class="data-items pb-3 data-items-unset">
                     <form method="post" id="form-data-list" action="{{ route($table)}}" enctype="multipart/form-data">
                         @csrf
-                    <div class="data-fields mt-3 px-2">
+                    <div class="data-fields mt-2 px-2">
                         <div class="row d-block">
                         <input type="hidden" name="code_old" id="code-old">
                         @if(tabComponemts($table))

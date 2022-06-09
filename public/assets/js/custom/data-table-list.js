@@ -1,4 +1,6 @@
-$(document).ready(function() {
+(function(window, undefined) {
+
+    $(document).ready(function() {
     $('.datepicker').pickadate({
         editable: true,
         format: 'dd-mm-yyyy',
@@ -38,11 +40,11 @@ $(document).ready(function() {
     var filters = $(".filters");
     filters.insertAfter($(".dataTable thead tr"));
 
-    var isChange = false;
+     window.isChange = false;
     $('#form-data-list input,#form-data-list select').on('keyup change',function (){
         $('.add-data-footer').addClass('d-flex');
         $('.table-edit .data-items').removeClass('data-items-unset');
-        isChange = true;
+        window.isChange = true;
     });
 
     $(document).on('keyup', function(e) {
@@ -89,7 +91,7 @@ $(document).ready(function() {
 
         // Close sidebar
         $(".hide-data-sidebar, .cancel-data-btn, .overlay-bg").on("click", function(e) {
-            if(isChange){
+            if(window.isChange){
                 alertsChange(e);
                 return;
             }
@@ -346,7 +348,7 @@ $(document).ready(function() {
 
 
     function addNewAjax(postURL){
-        var isSuccessSubmit = false;
+         window.isSuccessSubmit = false;
         var dataTable = $('.data-list-view').DataTable();
         $("#dataTableBuilder_processing").show();
         var disabled = $('#form-data-list').find(':input:disabled').removeAttr('disabled');
@@ -364,7 +366,7 @@ $(document).ready(function() {
                 closeSidebar();
                 toastr.success(data.message, 'Thông báo!');
                 $('.action-btns .actions-dropodown').hide();
-                isSuccessSubmit = true;
+                window.isSuccessSubmit = true;
             }
         }).fail(function(xhr, textStatus, errorThrown) {
             var errors = xhr.responseJSON.errors;
@@ -479,8 +481,8 @@ $(document).ready(function() {
             buttonsStyling: false,
         }).then(function (result) {
             if (result.value) {
-                $('#btn-submit').click();
-                if(isSuccessSubmit)
+                $('#btn-submit,#action-approve-transaction').click();
+                if(window.isSuccessSubmit)
                 closeSidebar();
             }
             else if (result.dismiss === Swal.DismissReason.cancel) {
@@ -496,7 +498,7 @@ $(document).ready(function() {
         $('.add-data-footer').removeClass('d-flex');
         $('.table-edit .data-items').addClass('data-items-unset');
         activeTabDefault();
-        isChange = false;
+        window.isChange = false;
     }
 
     function successChange(){
@@ -511,3 +513,4 @@ $(document).ready(function() {
         $('.tab-content').find('.tab-pane').first().addClass('active');
     }
 });
+})(window);
