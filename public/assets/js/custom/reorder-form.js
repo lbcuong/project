@@ -101,6 +101,7 @@
                 closeSidebar();
                 var dataTable = $('.data-list-view').DataTable();
                 dataTable.ajax.reload();
+                $('#select-all').removeClass('checkbox-all-custom');
                 toastr.success(data.message, 'Thông báo!');
             }else{
                 toastr.error(data.message, 'Thông báo!');

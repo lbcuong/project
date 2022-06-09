@@ -23,7 +23,7 @@
                             </div>
                             <div class="float-right mt-2 mb-2">
                                 <button type="button" id="action-approve-transaction"
-                                        class="btn-submit btn btn-primary waves-effect waves-light d-none">Xác nhận
+                                        class="btn-submit btn btn-primary waves-effect waves-light d-none" disabled>Xác nhận
                                 </button>
                                 <button type="button" id="action-cancel-transaction"
                                         class="btn btn-outline-danger waves-effect waves-light d-none">Huỷ

@@ -78,7 +78,7 @@
                     </div>
                     </form>
                 </div>
-                <div class="add-data-footer d-none justify-content-around px-3 mt-2">
+                    <div class="add-data-footer d-none justify-content-around px-3 mt-2">
                     <div class="add-data-btn">
                         <button type="button" id="{{(in_array($table,tableTransaction())) ? 'action-approve-transaction' : 'btn-submit'}}" class="btn btn-primary">Lưu</button>
                     </div>

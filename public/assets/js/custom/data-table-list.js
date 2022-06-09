@@ -150,6 +150,8 @@
                 $('#form-data-list').html('');
                 $('.add-new-data').css('width','60rem');
                 addTabReorderAjax();
+                $('.add-data-footer #action-approve-transaction').prop('disabled', false);
+
                 return;
             }
             $('#form-data-list').trigger("reset");
@@ -204,6 +206,7 @@
                         $('.add-new-data .title').html('detail');
                         $('#form-data-list').html('');
                         $('.add-new-data').css('width','60rem');
+                        $('.add-data-footer #action-approve-transaction').prop('disabled', true);
                     }
 
                     $('.click-image-thumbnail').addClass('d-none');
@@ -237,6 +240,7 @@
             if(TRANSACTION_LAYOUT.includes(TABLE_NAME)){
                 $('#form-data-list').html(data.html);
                 $('#button-approve').attr('param-id',rowId);
+                $('.transaction-tab #action-approve-transaction').prop('disabled', false);
                 var reorderActions = $(".reorder-actions");
                 reorderActions.insertAfter($(".sidebar-actions .dropdown-menu a:last"));
                 return;
@@ -498,6 +502,7 @@
         $('.add-data-footer').removeClass('d-flex');
         $('.table-edit .data-items').addClass('data-items-unset');
         activeTabDefault();
+
         window.isChange = false;
     }
 

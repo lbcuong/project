@@ -25,7 +25,7 @@ class ReorderController extends Controller
             $columns = getColumnDataBase($table,$diffColumn);
             $isDetail = false;
             $permission = true;
-            return response()->json( array('success' => true,'html'=>view('reorders.tabReorder',
+            return response()->json( array('success' => true,'html'=>view('reorders.index',
                 compact('table','title','oldData','isDetail','columns','permission'))
                 ->render()));
         }else
@@ -79,7 +79,7 @@ class ReorderController extends Controller
         $oldData = $reorderGuideline;
         $isDetail = true;
         $permission = true;
-        return response()->json( array('success' => true,'html'=>view('reorders.tabReorder',
+        return response()->json( array('success' => true,'html'=>view('reorders.index',
             compact('table','title','oldData','isDetail','columns','permission'))->render()));
     }
 
