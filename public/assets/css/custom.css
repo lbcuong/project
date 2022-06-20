@@ -462,3 +462,6 @@ div.dataTables_wrapper div.dataTables_processing{
 #main-menu-navigation .menu-content .open .active{
     color:#fff;
 }
+.nav.nav-tabs .nav-item .nav-link{
+    white-space: nowrap;
+}
