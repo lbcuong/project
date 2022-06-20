@@ -24,7 +24,6 @@
 <link rel="stylesheet" type="text/css" href="../../../app-assets/vendors/css/extensions/toastr.css">
 <link rel="stylesheet" type="text/css" href="../../../app-assets/vendors/css/forms/select/select2.min.css">
 
-
 <!-- END: Page CSS-->
 
 

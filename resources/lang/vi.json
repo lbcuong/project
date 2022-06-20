@@ -108,5 +108,7 @@
   "goods_issues.case_id" : "Vụ việc",
   "exported": "Đã xuất",
   "location_warehouses.code": "Mã",
-  "location_warehouses.container_id": "Vị trí trong kho"
+  "location_warehouses.container_id": "Vị trí trong kho",
+  "measuring_units.comment": "Nhận xét"
+
 }

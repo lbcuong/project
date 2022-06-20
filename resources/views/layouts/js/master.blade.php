@@ -2,8 +2,6 @@
 <script src="../../../app-assets/vendors/js/vendors.min.js"></script>
 <!-- BEGIN Vendor JS-->
 <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/jquery-validation@1.19.3/dist/jquery.validate.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/jquery-validation@1.19.3/dist/jquery.validate.min.js"></script>
 
 <!-- BEGIN: Page Vendor JS-->
 
@@ -37,8 +35,6 @@
 <script src="../../../app-assets/js/scripts/pickers/dateTime/pick-a-datetime.js"></script>
 <script src="../../../app-assets/vendors/js/extensions/toastr.min.js"></script>
 <script src="../../../app-assets/js/scripts/extensions/toastr.js"></script>
-<script src="http://ajax.aspnetcdn.com/ajax/jquery.validate/1.11.1/jquery.validate.min.js"></script>
 <script src="../../../app-assets/vendors/js/forms/select/select2.full.min.js"></script>
-<script src="../../../app-assets/js/scripts/forms/select/form-select2.js"></script>
 <script src="../../../assets/js/custom/reorder-form.js"></script>
 

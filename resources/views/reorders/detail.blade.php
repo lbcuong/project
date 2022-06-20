@@ -39,17 +39,3 @@
         </div>
     </div>
 </div>
-@if($isDetail AND ($oldData['is_approve'] ?? '') AND $oldData->approve_comment)
-    <div class="col-md-12">
-        <div class="card">
-            <div class="card-header">
-                <h4 class="card-title">Ghi chú</h4>
-            </div>
-            <div class="card-content">
-                <div class="card-body">
-                    <p>{!!$oldData->approve_comment!!}</p>
-                </div>
-            </div>
-        </div>
-    </div>
-@endif

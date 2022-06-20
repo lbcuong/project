@@ -9,7 +9,6 @@
             $('.btn-submit').removeClass('d-none');
             $('#action-cancel-transaction').removeClass('d-none');
         }
-
     });
 
     $('body').on("click", ".action-edit-item", function(e) {
@@ -178,11 +177,9 @@
                        $(that).closest('tr').remove();
                     }
                 }).fail(function(jqXHR, textStatus, errorThrown) {
-                    console.log(222);
                 });
             }
             else if (result.dismiss === Swal.DismissReason.cancel) {
-                console.log(33);
             }
         });
 

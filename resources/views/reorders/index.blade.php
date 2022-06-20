@@ -1,4 +1,4 @@
-<link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/smoothness/jquery-ui.css">
+<link rel="stylesheet" href="../../assets/css/jquery-ui.css">
 <div class="tab-reorder" is-detail="{{$isDetail ?? ''}}">
     @widget('TransactionBreadcrumb',['table'=>$table])
     <form method="post" id="form-data-list-transection" enctype="multipart/form-data">
@@ -12,14 +12,42 @@
                     <div class="card-content">
                         <div class="card-body">
                             <div class="row">
-                                @foreach($columns as $column)
-                                    <div class="col-xl-4 col-md-6 col-12">
-                                        <fieldset class="form-group">
-                                            <label for="basicInput">{{__(tablePrefixName($table).$column)}}</label>
-                                            <input type="text" name="{{$column}}" placeholder="{{__($column)}}" value="{{old($column, $oldData[$column] ?? '')}} {{($column =='code' AND !old($column, $oldData[$column] ?? '')) ? getCodeNextId($table,$title) : ''}}" class="form-control">
+                                <!--  Input Form -->
+                                <div class="col-xl-4 col-md-6 col-12">
+                                    <fieldset class="form-group">
+                                        <label for="basicInput">Mã</label>
+                                        <input type="text" name="code" placeholder="code" value=" " class="form-control">
+                                    </fieldset>
+                                </div>
+                                <div class="col-xl-4 col-md-6 col-12">
+                                    <fieldset class="form-group">
+                                        <label for="basicInput">Ngày lập phiếu</label>
+                                        <fieldset class="form-group position-relative">
+                                            <input type="text" class="form-control datepicker" name="from_date" pplaceholder="from_date" value="{{date('d-m-Y')}}">
+                                            <div class="form-control-position datepicker-icon">
+                                                <i class="fa fa-calendar"></i>
+                                            </div>
                                         </fieldset>
-                                    </div>
-                                @endforeach
+                                    </fieldset>
+                                </div>
+                                <div class="col-xl-4 col-md-6 col-12">
+                                    <fieldset class="form-group">
+                                        <label for="basicInput">Ngày cần xuất</label>
+                                        <fieldset class="form-group position-relative">
+                                            <input type="text" class="form-control datepicker" name="thru_date" pplaceholder="thru_date" value="{{date('d-m-Y')}}" >
+                                            <div class="form-control-position datepicker-icon">
+                                                <i class="fa fa-calendar"></i>
+                                            </div>
+                                        </fieldset>
+                                    </fieldset>
+                                </div>
+                                <div class="col-xl-4 col-md-6 col-12">
+                                    <fieldset class="form-group">
+                                        <label for="basicInput">Lý do</label>
+                                        <input type="text" name="comment" placeholder="comment" value=" " class="form-control">
+                                    </fieldset>
+                                </div>
+                                <!-- End Input Form -->
                             </div>
                             <div class="float-right mt-2 mb-2">
                                 <button type="button" id="action-approve-transaction"
@@ -41,7 +69,6 @@
     </form>
 </div>
 <script>
-
     var t = $('.add-reorder').DataTable(
         {
             "paging":   false,
