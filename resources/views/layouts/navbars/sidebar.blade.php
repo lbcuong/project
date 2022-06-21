@@ -15,6 +15,20 @@
             </div>
             <div class="shadow-bottom"></div>
             <ul class="navigation navigation-main" id="main-menu-navigation" data-menu="menu-navigation">
+                <li>
+                    <select class="form-control" id="project">
+                        <option value="" selected>Chọn dự án</option>
+                        <option value="1">HTV</option>
+                        <option value="2">OKR</option>
+                    </select>
+                </li>
+                <li class=" navigation-header"><span>QUẢN LÝ DỰ ÁN</span>
+                </li>
+                <li class=" nav-item"><a href="#"><i class="feather icon-briefcase"></i><span class="menu-title" >{{__('VẤN ĐỀ')}}</span></a>
+                    <ul class="menu-content">
+                        <li><a href="{{route('measuring_units')}}"><i class="feather icon-circle"></i><span class="menu-item">{{__('Danh sách vấn đề')}}</span></a></li>
+                    </ul>
+                </li>
                 <li class=" nav-item"><a href="#"><i class="feather icon-briefcase"></i><span class="menu-title" >{{__('MENU 1')}}</span></a>
                     <ul class="menu-content">
                         <li><a href="{{route('measuring_units')}}"><i class="feather icon-circle"></i><span class="menu-item">{{__('One Card')}}</span></a></li>
@@ -25,8 +39,14 @@
                         <li><a href="{{route('reorder_guidelines.list')}}"><i class="feather icon-circle"></i><span class="menu-item">{{__('Two Card')}}</span></a></li>
                      </ul>
                 </li>
+                <hr class="mx-1"/>
+                <li class=" navigation-header"><span>THIẾT ĐẶT</span>
+                </li>
+                <li class=" nav-item"><a href="app-email.html"><i class="fa fa-sliders"></i><span class="menu-title">{{__('Danh sách dự án')}}</span></a>
+                </li>
+                <li class=" nav-item"><a href="#"><i class="fa fa-address-book"></i><span class="menu-title">{{__('Loại vấn đề')}}</span></a>
+                </li>
             </ul>
-
         </div>
     </div>
 </div>
